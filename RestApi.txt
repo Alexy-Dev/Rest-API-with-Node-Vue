@@ -1,0 +1,38 @@
+Rest - Representational State Transfer - протокол для обмена API, использует HTTP протокол
+API - Application Program Interface (коммуникации для общения систем)
+API - относится к серверной(backend) части, а весь фронтенд является для него клиентами
+
+Rest API - методы
+GET - получение данных
+POST - отправка данных
+PUT - обновить данные
+DELETE - удалить
+
+Создаем папку client и в ней два файла index.html и frontend.js
+Подключаем Vue.js как модуль скрипта в index.html
+Далее в frontend.js подключаем модуль:
+import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.js'
+
+Собирать сервер будем в файле app.js в node express.
+Инициируем проект npm init
+Подключаем в терминале node express: npm i express
+Подключаем в терминале nodemon: npm i -D nodemon
+
+В файле package.json прописываем скрипты запуска: 
+"scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+    }
+
+Запускается сервер командой npm run start
+Но пока не описаны роутеры html не может быть сформирован из за отсутствия метода GET
+После создания сервера и описания get запросов app.js запускаем проект npm run dev
+
+Чтобы не писать стили, подключим bootstrup в index.html:
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+И напишем структуру для регистрации в html.
+Далее оживим все в VUE.
+Когда вся логика работает возвращаемся к серверу в файл app.js
+
+
+
